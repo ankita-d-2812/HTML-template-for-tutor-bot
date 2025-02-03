@@ -54,7 +54,7 @@
 
     .logout-btn {
       width: 100%;
-      background: orange;
+      background-color: #007BFF;
       color: white;
       border: none;
       padding: 10px;
@@ -64,7 +64,7 @@
     }
 
     .logout-btn:hover {
-      background: darkred;
+      background-color: #0056b3;
     }
 
     .content {
@@ -109,7 +109,7 @@
     }
 
     .send-btn {
-      background: #ff6600;
+      background: #007BFF;
       color: white;
       border: none;
     }
