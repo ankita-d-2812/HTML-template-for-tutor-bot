@@ -1,0 +1,173 @@
+Here’s an HTML, CSS, and JavaScript template that closely resembles the UI in the image. This template includes a sidebar, a chat/code editor area, a history panel, and a clean modern look with styling.
+
+---
+
+### 🛠 **Tech Stack:**
+- **HTML** for structure
+- **CSS (including TailwindCSS)** for styling
+- **JavaScript** for interactions
+
+---
+
+### **📌 Features:**
+- **Sidebar Navigation** with different menu options.
+- **Chat & Code Editor Section** with tab options (HTML, CSS, JS).
+- **History Panel** to display previous prompts.
+- **Search & Controls** for filtering and settings.
+- **Dark-Themed UI** to match the design.
+
+---
+
+### **📜 Full Code**
+I'll provide a **React + TailwindCSS** version, making it dynamic. Let me know if you need a pure HTML/CSS version.
+
+#### **📌 React Component (Using TailwindCSS)**
+This React component replicates the interface from the image.
+
+```jsx
+export default function AIChatHelper() {
+  return (
+    <div className="flex h-screen bg-gray-900 text-white">
+      {/* Sidebar */}
+      <aside className="w-64 bg-gray-800 p-4 flex flex-col">
+        <h2 className="text-xl font-bold mb-4">MindMerge</h2>
+        <nav className="flex-1">
+          <ul className="space-y-3">
+            <li className="p-2 bg-gray-700 rounded-lg">AI Chat Helper</li>
+            <li className="p-2 hover:bg-gray-700 rounded-lg">Templates</li>
+            <li className="p-2 hover:bg-gray-700 rounded-lg">My Projects</li>
+            <li className="p-2 hover:bg-gray-700 rounded-lg">Statistics</li>
+            <li className="p-2 hover:bg-gray-700 rounded-lg">Settings</li>
+            <li className="p-2 hover:bg-gray-700 rounded-lg">Updates & FAQ</li>
+          </ul>
+        </nav>
+        <div className="mt-4 p-3 bg-orange-500 rounded-lg text-center">
+          <p className="text-sm">Pro Plan</p>
+          <p className="text-xs">Strengthen AI, Get Plan</p>
+          <button className="mt-2 bg-orange-700 px-3 py-1 rounded">Get</button>
+        </div>
+        <button className="mt-4 bg-red-600 p-2 rounded-lg">Log out</button>
+      </aside>
+
+      {/* Main Chat Section */}
+      <main className="flex-1 flex flex-col">
+        {/* Header */}
+        <header className="p-4 bg-gray-800 flex justify-between items-center">
+          <h2 className="text-lg font-semibold">AI Chat Helper</h2>
+          <input
+            type="text"
+            placeholder="Search"
+            className="bg-gray-700 px-3 py-1 rounded-md focus:outline-none"
+          />
+        </header>
+
+        {/* Chat + Code Section */}
+        <section className="flex flex-1 overflow-hidden">
+          {/* Code Editor Section */}
+          <div className="flex-1 p-4">
+            {/* Code Tabs */}
+            <div className="flex space-x-3 mb-3">
+              <button className="px-3 py-1 bg-gray-700 rounded-lg">HTML</button>
+              <button className="px-3 py-1 bg-gray-700 rounded-lg">CSS</button>
+              <button className="px-3 py-1 bg-orange-500 rounded-lg">JS</button>
+            </div>
+
+            {/* Code Display */}
+            <div className="bg-gray-800 p-3 rounded-lg text-sm font-mono">
+              <pre className="text-orange-300">
+                <code>
+                  {`let cancelButton = document.getElementById("cancel-button");
+let sendButton = document.getElementById("send-button");
+
+cancelButton.addEventListener("click", function() {
+  console.log("Cancel button clicked");
+});
+
+sendButton.addEventListener("click", function() {
+  console.log("Send button clicked");
+});`}
+                </code>
+              </pre>
+            </div>
+
+            {/* Response */}
+            <p className="text-sm text-gray-400 mt-2">
+              Note: This is just an example of a simple HTML form.
+            </p>
+
+            {/* User Input */}
+            <div className="mt-4 flex">
+              <input
+                type="text"
+                placeholder="Start typing..."
+                className="flex-1 bg-gray-700 p-2 rounded-l-lg focus:outline-none"
+              />
+              <button className="bg-orange-500 px-4 rounded-r-lg">Send</button>
+            </div>
+          </div>
+
+          {/* History Panel */}
+          <aside className="w-72 bg-gray-800 p-4">
+            <h3 className="text-lg font-semibold mb-3">History</h3>
+            <ul className="space-y-2 text-sm">
+              <li className="bg-gray-700 p-2 rounded-lg">Create welcome form</li>
+              <li className="p-2 hover:bg-gray-700 rounded-lg">Instructions</li>
+              <li className="p-2 hover:bg-gray-700 rounded-lg">Career Tips</li>
+              <li className="p-2 hover:bg-gray-700 rounded-lg">Onboarding</li>
+            </ul>
+            <button className="mt-4 bg-red-600 w-full p-2 rounded-lg">Clear history</button>
+          </aside>
+        </section>
+      </main>
+    </div>
+  );
+}
+```
+
+---
+
+### **📌 Explanation**
+- **Sidebar**:
+  - Navigation with different menu items.
+  - "Pro Plan" section styled in orange.
+  - "Log out" button at the bottom.
+  
+- **Main Chat Area**:
+  - **Header** with title and search bar.
+  - **Code Editor** with tabs for HTML, CSS, and JS.
+  - **Chat Input** at the bottom with a send button.
+
+- **History Panel**:
+  - Displays recent actions.
+  - "Clear history" button at the bottom.
+
+---
+
+### **🛠 How to Use This**
+1. **Install React & TailwindCSS**
+   ```sh
+   npx create-react-app my-chat-ui
+   cd my-chat-ui
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
+   ```
+2. **Configure `tailwind.config.js`**
+   ```js
+   module.exports = {
+     content: ["./src/**/*.{js,jsx,ts,tsx}"],
+     theme: { extend: {} },
+     plugins: [],
+   };
+   ```
+3. **Use the component**
+   - Replace `App.js` with the above code.
+   - Run `npm start`.
+
+---
+
+### **📌 Customization Options**
+- Want a **pure HTML/CSS version**? Let me know! I’ll provide a non-React version.
+- Need a **fully functional chat system**? I can add AI integration (e.g., OpenAI API).
+- Want **additional features** like themes, animations, or database storage? Tell me! 😊
+
+Let me know if you need any changes! 🚀
